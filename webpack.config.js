@@ -50,5 +50,29 @@ module.exports = {   /* Из данного файла мы экспортиру
       new MiniCssExtractPlugin({
          filename: 'bundle.[hash].css' // В какой файл все поместить
       })
-   ]
+   ],
+
+   module: { //Установка Лоадеров
+      rules: [
+         {
+            test: /\.s[ac]ss$/i, //Тестируем расширение scss
+            use: [
+               MiniCssExtractPlugin.loader,
+               'css-loader',
+               'sass-loader',
+            ],
+         },
+
+         { //Объект для работы с Babel
+            test: /\.m?js$/,
+            exclude: /node_modules/,
+            use: {
+               loader: "babel-loader", // Добавление плагинов для Babel через Webpack
+               options: {
+                  presets: ['@babel/preset-env']
+               }
+            }
+         },
+      ],
+   },
 };
