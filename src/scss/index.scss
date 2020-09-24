@@ -1,5 +1,6 @@
-$red: rgba(255, 0, 0, 0.548);
+$red: rgba(17, 0, 255, 0.582);
 body {
+   background-color: $red;
    display: flex;
    .wrapper {
       width: 1200vw;
