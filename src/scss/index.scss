@@ -1,0 +1,14 @@
+$red: rgba(17, 0, 255, 0.582);
+body {
+   background-color: $red;
+   display: flex;
+   .wrapper {
+      width: 1200vw;
+      &_content {
+         align-items: center;
+         :hover {
+            background-color: $red;
+         }
+      }
+   }
+}
