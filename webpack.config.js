@@ -20,6 +20,7 @@ const jsLoaders = () => { // Функция для работы с Eslint, он�
          loader: 'babel-loader', // Добавление плагинов для Babel через Webpack
          options: {
             presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-class-properties'],
          },
       },
    ];
